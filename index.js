@@ -21,3 +21,11 @@ if (question === "ecmascript") {
  */
 const max = 50;
 const min = 23;
+
+if (max % 2 === 0) {
+  max -= 1;
+}
+for (let i = max; i >= min; i-= 2) 
+   {
+    console.log(i);
+  }
