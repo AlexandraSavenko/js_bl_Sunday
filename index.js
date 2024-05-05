@@ -39,11 +39,49 @@
  70 === 01:10
 */
 
-const time = prompt("Введіть число");
-// const time = 65;
-const hours = String (Math.floor (time / 60)).padStart(2, 0);
-const minets =String (time % 60).padStart(2, 0);
+// const time = prompt("Введіть число");
+// // const time = 65;
+// const hours = String (Math.floor (time / 60)).padStart(2, 0);
+// const minets =String (time % 60).padStart(2, 0);
 
-console.log(`${hours}:${minets}`);
-// console.log(minets);
+// console.log(`${hours}:${minets}`);
+// // console.log(minets);
+
+
+/**
+*? Напишіть код, який питає
+*? логін за допомогою prompt та логує результат
+*? у консоль браузера
+    
+*? Якщо відвідувач вводить "Admin",
+*? то prompt запитує пароль.
+*? Якщо нічого не ввели або натиснуто клавішу Esc
+*? вивести рядок "Canceled"
+*? В іншому випадку вивести рядок "Я вас не знаю"
+    
+*? Пароль перевірять так:
+*? Якщо введено пароль "Password",
+*? то вивести рядок "Вітаю"
+*? інакше виводить рядок "Невірний пароль!"
+ */
+
+let login = prompt("Введіть логін");
+if (login) {
+    login = login.trim();
+}
+
+if (login === "Admin") {
+    const password = prompt("Введіть пароль");
+    if (password === "Password") {
+       alert("Вітаю");
+    } else {
+       alert("Невірний пароль!") ;
+    }
+} else if(!login){
+// } else if(login === null || login === ""){
+
+    alert("Canceled");
+} else {
+    alert("Я вас не знаю");
+}
 
