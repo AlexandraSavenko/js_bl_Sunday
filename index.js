@@ -13,8 +13,6 @@
 //   alert("Не знаєте? ECMAScript!");
 // }
 
-
-
 // /**
 //  *? Напишіть цикл, який виводить у консоль
 //  *? всі непарні числа  від max до min  за спаданням
@@ -25,11 +23,10 @@
 // if (max % 2 === 0) {
 //   max -= 1;
 // }
-// for (let i = max; i >= min; i-= 2) 
+// for (let i = max; i >= min; i-= 2)
 //    {
 //     console.log(i);
 //   }
-
 
 /**
 Напишіть програму, яка отримає від користувача
@@ -46,7 +43,6 @@
 
 // console.log(`${hours}:${minets}`);
 // // console.log(minets);
-
 
 /**
 *? Напишіть код, який питає
@@ -65,23 +61,45 @@
 *? інакше виводить рядок "Невірний пароль!"
  */
 
-let login = prompt("Введіть логін");
-if (login) {
-    login = login.trim();
+// let login = prompt("Введіть логін");
+// if (login) {
+//     login = login.trim();
+// }
+
+// if (login === "Admin") {
+//     const password = prompt("Введіть пароль");
+//     if (password === "Password") {
+//        alert("Вітаю");
+//     } else {
+//        alert("Невірний пароль!") ;
+//     }
+// } else if(!login){
+// // } else if(login === null || login === ""){
+
+//     alert("Canceled");
+// } else {
+//     alert("Я вас не знаю");
+// }
+
+/**
+ *? При завантаженні сторінки користувачеві пропонується
+ *? в prompt ввести число. Введення додається до значення
+ *? змінної total.
+ *? Операція введення числа триває до того часу,
+ *? поки користувач не натисне кнопку Cancel у prompt.
+ *? Після того як користувач припинив введення, натиснувши на
+ *? кнопку Cancel, показати alert з рядком "Загальна сума введених чисел дорівнює [число]."
+ 
+ *! Робити перевірку, що користувач ввів саме число,
+ *! а не довільний набір символів не потрібно.
+ */
+
+let firstNumb = prompt("Введіть число");
+
+let total = 0;
+
+while (firstNumb !== null) {
+  total = total + Number(firstNumb);
+  firstNumb = prompt("Введіть число");
 }
-
-if (login === "Admin") {
-    const password = prompt("Введіть пароль");
-    if (password === "Password") {
-       alert("Вітаю");
-    } else {
-       alert("Невірний пароль!") ;
-    }
-} else if(!login){
-// } else if(login === null || login === ""){
-
-    alert("Canceled");
-} else {
-    alert("Я вас не знаю");
-}
-
+alert(`Загальна сума введених чисел дорівнює ${total}`);
