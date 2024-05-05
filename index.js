@@ -12,3 +12,12 @@ if (question === "ecmascript") {
 } else {
   alert("Не знаєте? ECMAScript!");
 }
+
+
+
+/**
+ *? Напишіть цикл, який виводить у консоль
+ *? всі непарні числа  від max до min  за спаданням
+ */
+const max = 50;
+const min = 23;
