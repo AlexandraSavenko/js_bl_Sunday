@@ -210,3 +210,38 @@
 // }
 
 // console.log(arrey(arr1, arr2));
+///**
+// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// *? Зробіть знижку 20 % на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
+// function makeDiscount(array) {
+//   const newFruits = [];
+//   let id = 1;
+//   for (const fruit of array) {
+//     const newFruit = {
+//       ...fruit,
+//       price: fruit.price * 0.8,
+//       id: id++,
+//     };
+//     newFruits.push(newFruit);
+//   }
+//   return newFruits;
+// }
+// console.log(makeDiscount(fruits));
+//======================================================================================================
+/*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
+  і перевіряє правильність закриття дужок () {} []
+  Якщо рядок містить коректний код функція повертає true.
+  В іншому випадку повертає false
+*/
+const someFn = `function foo() {
+  const arr = [1, 2, 3];
+  console.log(arr);
+}`;
+// console.log(checkBrackets(someFn));
