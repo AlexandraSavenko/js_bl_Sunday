@@ -112,16 +112,33 @@
  *? 4 виводить вміст об'єкта users у форматі
  *? ключ: значення використовуючи Object.keys() і for...of
  */
-const user = {
-  name: "John",
-  age: 20,
-  hobby: "tennis",
-  premium: true,
+// const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tennis",
+//   premium: true,
+// };
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+// const userValues = Object.keys(user);
+// for (const item of userValues) {
+//   console.log(`${item} : ${user[item]}`);
+// }
+
+/* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників. */
+const someObj = {
+  worker1: 360,
+  worker2: 750,
+  worker3: 240,
 };
-user.mood = "happy";
-user.hobby = "skydiving";
-user.premium = false;
-const userValues = Object.keys(user);
-for (const item of userValues) {
-  console.log(`${item} : ${user[item]}`);
+
+function callTotalSalery(object) {
+  let total = 0;
+  for (const value of Object.values(object)) {
+    total += value;
+  }
+  return total;
 }
+
+console.log(callTotalSalery(someObj));
