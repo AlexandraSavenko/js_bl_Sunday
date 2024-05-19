@@ -150,20 +150,43 @@
  *? Функція рахує та повертає загальну вартість каменів
  *? з таким ім'ям, ціною та кількістю з об'єкта
  */
-const stones = [
-  { name: "Изумруд", price: 1300, quantity: 4 },
-  { name: "Бриллиант", price: 2700, quantity: 6 },
-  { name: "Сапфир", price: 400, quantity: 7 },
-  { name: "Щебень", price: 150, quantity: 100 },
-];
+//const stones = [
+//   { name: "Изумруд", price: 1300, quantity: 4 },
+//   { name: "Бриллиант", price: 2700, quantity: 6 },
+//   { name: "Сапфир", price: 400, quantity: 7 },
+//   { name: "Щебень", price: 150, quantity: 100 },
+// ];
 
-function calcTotalPrice(someStones, stoneName) {
-  for (const { name, price, quantity } of someStones) {
-    if (name === stoneName) {
-      return price * quantity;
-    }
+// function calcTotalPrice(someStones, stoneName) {
+//   for (const { name, price, quantity } of someStones) {
+//     if (name === stoneName) {
+//       return price * quantity;
+//     }
+//   }
+//   return "нема";
+// }
+
+// console.log(calcTotalPrice(stones, "Сапфир"));
+
+// напиши код який із массиву arr видаляє елемент foo.
+// розвертає цей массив
+// і повертає рядок js is the best
+// вхідний массив не має змінюватись (мутується)
+const arr = ["best", "the", "foo", "is", "js"];
+
+function deletaElement(array, element) {
+  const copiArr = [...array];
+  const idx = copiArr.indexOf(element);
+  console.log(idx);
+  if (idx !== -1) {
+    copiArr.splice(idx, 1);
+
   }
-  return "нема";
+  copiArr.reverse();
+
+  return copiArr.join(" ");
 }
 
-console.log(calcTotalPrice(stones, "Сапфир"));
+
+console.log(deletaElement(arr, "adf"));
+console.log(arr);
