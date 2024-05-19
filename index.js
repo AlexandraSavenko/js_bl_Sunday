@@ -172,21 +172,41 @@
 // розвертає цей массив
 // і повертає рядок js is the best
 // вхідний массив не має змінюватись (мутується)
-const arr = ["best", "the", "foo", "is", "js"];
+// const arr = ["best", "the", "foo", "is", "js"];
 
-function deletaElement(array, element) {
-  const copiArr = [...array];
-  const idx = copiArr.indexOf(element);
-  console.log(idx);
-  if (idx !== -1) {
-    copiArr.splice(idx, 1);
+// function deletaElement(array, element) {
+//   const copiArr = [...array];
+//   const idx = copiArr.indexOf(element);
+//   console.log(idx);
+//   if (idx !== -1) {
+//     copiArr.splice(idx, 1);
 
-  }
-  copiArr.reverse();
+//   }
+//   copiArr.reverse();
 
-  return copiArr.join(" ");
-}
+//   return copiArr.join(" ");
+// }
 
+// console.log(deletaElement(arr, "adf"));
+// console.log(arr);
+// const string = arr
+//   .slice(0, arr.indexOf("foo"))
+//   .concat(arr.slice(arr.indexOf("foo") + 1, arr.length))
+//   .reverse()
+//   .join(" ");
 
-console.log(deletaElement(arr, "adf"));
-console.log(arr);
+// Напиши функцію, яка приймає два масиви і повертає массив спільних значень
+// const arr1 = [1, 2, 3, 7, 5];
+// const arr2 = [3, 5, 4, 2, 9];
+
+// function arrey(arrey1, arrey2) {
+//   let comanArrey = [];
+//   for (const number of arrey1) {
+//     if (arrey2.includes(number)) {
+//       comanArrey.push(number);
+//     }
+//   }
+//   return comanArrey;
+// }
+
+// console.log(arrey(arr1, arr2));
