@@ -272,7 +272,6 @@ function checkBrackets(str) {
   return openBracketsArray.length === 0;
 }
 
-// console.log(checkBrackets("(){[](})"));
-// console.log(checkBrackets("(){[]}()"));
-
-checkBrackets("(){[]}()");
+console.log(checkBrackets("(){[](})"));
+console.log(checkBrackets("(){[]}()"));
+console.log(checkBrackets("(){[]}()("));
