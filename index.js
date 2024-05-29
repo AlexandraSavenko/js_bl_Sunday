@@ -234,11 +234,47 @@
 //   return newFruits;
 // }
 // console.log(makeDiscount(fruits));
-// console.log(checkBrackets(someFn));
-
 //======================================================================================================
 /*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
   і перевіряє правильність закриття дужок () {} []
   Якщо рядок містить коректний код функція повертає true.
   В іншому випадку повертає false
 */
+// const someFn = `function foo() {
+//   const arr = [1, 2, 3];
+//   console.log(arr);
+// }`;
+// console.log(checkBrackets(someFn));
+
+function checkBrackets(str) {
+  const openCloseBrackets = {
+    "}": "{",
+    ")": "(",
+    "]": "[",
+    //  8: "7",
+  };
+
+  const openBrackets = Object.values(openCloseBrackets); //"[{(";
+  const closeBrackets = Object.keys(openCloseBrackets); //"]})";
+  const openBracketsArray = [];
+
+  for (const char of str) {
+    //  console.log(char);
+    if (openBrackets.includes(char)) {
+      openBracketsArray.push(char);
+    } else if (closeBrackets.includes(char)) {
+      let lastOpenBrackets = openBracketsArray.pop();
+      // console.log(lastOpenBrackets);
+      if (openCloseBrackets[char] !== lastOpenBrackets) {
+        //   console.log(openBracketsArray);
+        return false;
+      }
+    }
+  }
+  //   console.log(openBracketsArray);
+  return openBracketsArray.length === 0;
+}
+
+console.log(checkBrackets("(){[](})"));
+console.log(checkBrackets("(){[]}()"));
+console.log(checkBrackets("(){[]}()("));
