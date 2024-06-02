@@ -331,25 +331,59 @@
 // client.email = "jhghdsjfj@jhfh.com";
 // console.log(client.email);
 
+// /**
+//  *? З об'єкту concerts потрібно отримати масив
+//  *? в якому будуть лише імена міст.
+//  *? З масиву потрібно прибрати міста, в яких концерт уже пройшов і
+//  *? відсортувати їх у хронологічному порядку.
+//  *? Результат вивести у консоль.
+//  *? Очікуваний результат ["Одеса", "Умань", "Харків"]
+//  */
+// const concerts = {
+//   Київ: new Date("2020-04-01"),
+//   Умань: new Date("2025-07-02"),
+//   Вінниця: new Date("2020-04-21"),
+//   Одеса: new Date("2025-03-15"),
+//   Хмельницький: new Date("2020-04-18"),
+//   Харків: new Date("2025-07-10"),
+// };
+
+// const keys = Object.keys(concerts)
+//   .filter((key) => concerts[key] > new Date())
+//   .toSorted((a, b) => concerts[a] - concerts[b]);
+
+// console.log(keys);
+
+//TODO:=============================================
 /**
- *? З об'єкту concerts потрібно отримати масив
- *? в якому будуть лише імена міст.
- *? З масиву потрібно прибрати міста, в яких концерт уже пройшов і
- *? відсортувати їх у хронологічному порядку.
- *? Результат вивести у консоль.
- *? Очікуваний результат ["Одеса", "Умань", "Харків"]
+ *? Напиши клас Storage який створює об'єкти
+ *? Для управління складом товарів.
+ *? При виклику отримуватиме один агрумент - початковий масив товарів,
+ *? і записувати їх у властивість items.
+ *? Додай методи класу:
+ *? getItems() - повертайте масив товарів
+ *? addItems(item) - отримує новий товар та додає його до поточних
+ *? removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
  */
-const concerts = {
-  Київ: new Date("2020-04-01"),
-  Умань: new Date("2025-07-02"),
-  Вінниця: new Date("2020-04-21"),
-  Одеса: new Date("2025-03-15"),
-  Хмельницький: new Date("2020-04-18"),
-  Харків: new Date("2025-07-10"),
-};
 
-const keys = Object.keys(concerts)
-  .filter((key) => concerts[key] > new Date())
-  .toSorted((a, b) => concerts[a] - concerts[b]);
+class Storage {
+  constructor(items) {
+    this.items = items;
+  }
 
-console.log(keys);
+  getItems() {
+    return this.items;
+  }
+
+  addItem(item) {
+    this.items.push(item);
+  }
+
+  removeItem(item) {
+    this.items = this.items.filter((elem) => elem !== item);
+  }
+}
+
+const storage = new Storage(["item1", "item2", "item3"]);
+storage.removeItem("item1");
+console.log(storage.getItems());
