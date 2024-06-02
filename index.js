@@ -384,6 +384,46 @@
 //   }
 // }
 
-const storage = new Storage(["item1", "item2", "item3"]);
-storage.removeItem("item1");
-console.log(storage.getItems());
+// const storage = new Storage(["item1", "item2", "item3"]);
+// storage.removeItem("item1");
+// console.log(storage.getItems());
+//TODO:==============================================
+/**
+ *? Поверніть об'єкт, в якому вказано кількість тегів.
+ *? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
+ */
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+// const bigArr = tweets.flatMap((obj) => obj.tags);
+// console.log(bigArr);
+// const foo = bigArr.reduce((acc, el) => {
+//   return { ...acc, [el]: acc[el] ? acc[el] + 1 : 1 };
+// }, {});
+// console.table(foo);
+//===================================function constructor===================
+//  Напиши функцію конструктор User для
+// *? створення користувача з такими властивостями:
+// *? a. userName - ім'я, рядок
+// *? b. age - вік, число
+// *? c. numbersOfPost - кількість постів, число
+// *? d. функція очікує 1 параметр - об'єкт налаштувань з однойменними властивостями
+// *? Додай метод getInfo(), який повертає рядок:
+// *? `Користувачеві ${ім'я} ${вік} років і в нього ${кількістьПублікацій} публікацій.`
+//  */
+// const User = function (userObj) {
+//   const { userName, age, numbersOfPost } = userObj;
+//   this.username = userName;
+//   this.age = age;
+//   this.numbersOfPost = numbersOfPost;
+// };
+// User.prototype.getInfo = function () {
+//   console.log(
+//     `Користувачеві ${this.username} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`
+//   );
+// };
+// const polly = new User({ userName: "Polly", age: 30, numbersOfPost: 15 });
