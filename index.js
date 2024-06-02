@@ -356,34 +356,56 @@
 
 //TODO:=============================================
 /**
- *? Напиши клас Storage який створює об'єкти
- *? Для управління складом товарів.
- *? При виклику отримуватиме один агрумент - початковий масив товарів,
- *? і записувати їх у властивість items.
- *? Додай методи класу:
- *? getItems() - повертайте масив товарів
- *? addItems(item) - отримує новий товар та додає його до поточних
- *? removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
- */
+//  *? Напиши клас Storage який створює об'єкти
+//  *? Для управління складом товарів.
+//  *? При виклику отримуватиме один агрумент - початковий масив товарів,
+//  *? і записувати їх у властивість items.
+//  *? Додай методи класу:
+//  *? getItems() - повертайте масив товарів
+//  *? addItems(item) - отримує новий товар та додає його до поточних
+//  *? removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
+//  */
 
-class Storage {
-  constructor(items) {
-    this.items = items;
-  }
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
 
-  getItems() {
-    return this.items;
-  }
+//   getItems() {
+//     return this.items;
+//   }
 
-  addItem(item) {
-    this.items.push(item);
-  }
+//   addItem(item) {
+//     this.items.push(item);
+//   }
 
-  removeItem(item) {
-    this.items = this.items.filter((elem) => elem !== item);
-  }
-}
+//   removeItem(item) {
+//     this.items = this.items.filter((elem) => elem !== item);
+//   }
+// }
 
-const storage = new Storage(["item1", "item2", "item3"]);
-storage.removeItem("item1");
-console.log(storage.getItems());
+// const storage = new Storage(["item1", "item2", "item3"]);
+// storage.removeItem("item1");
+// console.log(storage.getItems());
+//===================================function constructor===================
+//  Напиши функцію конструктор User для
+// *? створення користувача з такими властивостями:
+// *? a. userName - ім'я, рядок
+// *? b. age - вік, число
+// *? c. numbersOfPost - кількість постів, число
+// *? d. функція очікує 1 параметр - об'єкт налаштувань з однойменними властивостями
+// *? Додай метод getInfo(), який повертає рядок:
+// *? `Користувачеві ${ім'я} ${вік} років і в нього ${кількістьПублікацій} публікацій.`
+//  */
+// const User = function (userObj) {
+//   const { userName, age, numbersOfPost } = userObj;
+//   this.username = userName;
+//   this.age = age;
+//   this.numbersOfPost = numbersOfPost;
+// };
+// User.prototype.getInfo = function () {
+//   console.log(
+//     `Користувачеві ${this.username} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`
+//   );
+// };
+// const polly = new User({ userName: "Polly", age: 30, numbersOfPost: 15 });
