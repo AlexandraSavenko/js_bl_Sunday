@@ -356,34 +356,52 @@
 
 //TODO:=============================================
 /**
- *? Напиши клас Storage який створює об'єкти
- *? Для управління складом товарів.
- *? При виклику отримуватиме один агрумент - початковий масив товарів,
- *? і записувати їх у властивість items.
- *? Додай методи класу:
- *? getItems() - повертайте масив товарів
- *? addItems(item) - отримує новий товар та додає його до поточних
- *? removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
+//  *? Напиши клас Storage який створює об'єкти
+//  *? Для управління складом товарів.
+//  *? При виклику отримуватиме один агрумент - початковий масив товарів,
+//  *? і записувати їх у властивість items.
+//  *? Додай методи класу:
+//  *? getItems() - повертайте масив товарів
+//  *? addItems(item) - отримує новий товар та додає його до поточних
+//  *? removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
+//  */
+
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+
+//   getItems() {
+//     return this.items;
+//   }
+
+//   addItem(item) {
+//     this.items.push(item);
+//   }
+
+//   removeItem(item) {
+//     this.items = this.items.filter((elem) => elem !== item);
+//   }
+// }
+
+// const storage = new Storage(["item1", "item2", "item3"]);
+// storage.removeItem("item1");
+// console.log(storage.getItems());
+//TODO:==============================================
+/**
+ *? Поверніть об'єкт, в якому вказано кількість тегів.
+ *? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
  */
-
-class Storage {
-  constructor(items) {
-    this.items = items;
-  }
-
-  getItems() {
-    return this.items;
-  }
-
-  addItem(item) {
-    this.items.push(item);
-  }
-
-  removeItem(item) {
-    this.items = this.items.filter((elem) => elem !== item);
-  }
-}
-
-const storage = new Storage(["item1", "item2", "item3"]);
-storage.removeItem("item1");
-console.log(storage.getItems());
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+const bigArr = tweets.flatMap((obj) => obj.tags);
+console.log(bigArr);
+const foo = bigArr.reduce((acc, el) => {
+  return { ...acc, [el]: acc[el] ? acc[el] + 1 : 1 };
+}, {});
+console.table(foo);
