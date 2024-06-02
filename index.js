@@ -246,20 +246,52 @@
 // }`;
 // console.log(checkBrackets(someFn));
 //==============================================================================================
-// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
-// *? Зробіть знижку 20 % на всі фрукти у масиві
-// *? Надайте ід для кожного продукту
-// */
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
-];
-function discountFruit(arrFruit) {
-  return arrFruit.map((obj, index) => ({
-    ...obj,
-    price: obj.price * 0.8,
-    id: index + 1,
-  }));
-}
-console.log(discountFruit(fruits));
+// // *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// // *? Зробіть знижку 20 % на всі фрукти у масиві
+// // *? Надайте ід для кожного продукту
+// // */
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
+// function discountFruit(arrFruit) {
+//   return arrFruit.map((obj, index) => ({
+//     ...obj,
+//     price: obj.price * 0.8,
+//     id: index + 1,
+//   }));
+// }
+// console.log(discountFruit(fruits));
+
+
+
+// //TODO:=============================================
+// Створити клас Worker, у якого є властивості name, age, salary.
+//У класу Worker є метод getSalary.
+//Створити клас TopLevelWorker, у якого є властивість hierarchyLevel
+//і який успадковує клас Worker, додаючи метод getHierarchyLevel
+
+
+
+// class Worker {
+//   constructor(name, age, salary) {
+//     this.name = name;
+//     this.age = age;
+//     this.salary = salary;
+//   }
+//   getSalary() {
+//     return this.salary;
+//   }
+// }
+//  class TopLevelWorker extends Worker {
+//   constructor (name, age, salary, hierarchyLevel) {
+// super(name, age, salary);
+// this.hierarchyLevel = hierarchyLevel;
+//   }
+//   getHierarchyLevel(){
+//     return this.hierarchyLevel
+//   }
+//  }
+//   const worker = new TopLevelWorker("Olga", 1990, 6000, "top") 
+//   console.log(worker.getHierarchyLevel());
