@@ -264,15 +264,11 @@
 // }
 // console.log(discountFruit(fruits));
 
-
-
 // //TODO:=============================================
 // Створити клас Worker, у якого є властивості name, age, salary.
 //У класу Worker є метод getSalary.
 //Створити клас TopLevelWorker, у якого є властивість hierarchyLevel
 //і який успадковує клас Worker, додаючи метод getHierarchyLevel
-
-
 
 // class Worker {
 //   constructor(name, age, salary) {
@@ -293,5 +289,44 @@
 //     return this.hierarchyLevel
 //   }
 //  }
-//   const worker = new TopLevelWorker("Olga", 1990, 6000, "top") 
+//   const worker = new TopLevelWorker("Olga", 1990, 6000, "top")
 //   console.log(worker.getHierarchyLevel());
+
+//TODO:=============================================
+/**
+ *? Напиши клас Client який створює об'єкт
+ *? з ​​властивостями login email
+ *? Оголоси приватні властивості #login #email,
+ *? доступ до яких зроби через геттер та сеттер login email
+ */
+
+class Client {
+  #login;
+  #email;
+
+  constructor(params) {
+    this.#login = params.login;
+    this.#email = params.email;
+  }
+
+  get login() {
+    return this.#login;
+  }
+
+  set login(newLogin) {
+    this.#login = newLogin;
+  }
+
+  get email() {
+    return this.#email;
+  }
+
+  set email(newEmail) {
+    this.#email = newEmail;
+  }
+}
+
+const client = new Client({ login: "Sorkjn", email: "sjhdh@gmail.com" });
+console.log(client);
+client.email = "jhghdsjfj@jhfh.com";
+console.log(client.email);
