@@ -384,28 +384,6 @@
 //   }
 // }
 
-// const storage = new Storage(["item1", "item2", "item3"]);
-// storage.removeItem("item1");
-// console.log(storage.getItems());
-//===================================function constructor===================
-//  Напиши функцію конструктор User для
-// *? створення користувача з такими властивостями:
-// *? a. userName - ім'я, рядок
-// *? b. age - вік, число
-// *? c. numbersOfPost - кількість постів, число
-// *? d. функція очікує 1 параметр - об'єкт налаштувань з однойменними властивостями
-// *? Додай метод getInfo(), який повертає рядок:
-// *? `Користувачеві ${ім'я} ${вік} років і в нього ${кількістьПублікацій} публікацій.`
-//  */
-// const User = function (userObj) {
-//   const { userName, age, numbersOfPost } = userObj;
-//   this.username = userName;
-//   this.age = age;
-//   this.numbersOfPost = numbersOfPost;
-// };
-// User.prototype.getInfo = function () {
-//   console.log(
-//     `Користувачеві ${this.username} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`
-//   );
-// };
-// const polly = new User({ userName: "Polly", age: 30, numbersOfPost: 15 });
+const storage = new Storage(["item1", "item2", "item3"]);
+storage.removeItem("item1");
+console.log(storage.getItems());
