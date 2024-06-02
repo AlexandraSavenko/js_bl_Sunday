@@ -240,8 +240,26 @@
   Якщо рядок містить коректний код функція повертає true.
   В іншому випадку повертає false
 */
-const someFn = `function foo() {
-  const arr = [1, 2, 3];
-  console.log(arr);
-}`;
+// const someFn = `function foo() {
+//   const arr = [1, 2, 3];
+//   console.log(arr);
+// }`;
 // console.log(checkBrackets(someFn));
+//==============================================================================================
+// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// *? Зробіть знижку 20 % на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+const fruits = [
+  { name: "apple", price: 200 },
+  { name: "orange", price: 300 },
+  { name: "grapes", price: 750 },
+];
+function discountFruit(arrFruit) {
+  return arrFruit.map((obj, index) => ({
+    ...obj,
+    price: obj.price * 0.8,
+    id: index + 1,
+  }));
+}
+console.log(discountFruit(fruits));
