@@ -300,33 +300,56 @@
  *? доступ до яких зроби через геттер та сеттер login email
  */
 
-class Client {
-  #login;
-  #email;
+// class Client {
+//   #login;
+//   #email;
 
-  constructor(params) {
-    this.#login = params.login;
-    this.#email = params.email;
-  }
+//   constructor(params) {
+//     this.#login = params.login;
+//     this.#email = params.email;
+//   }
 
-  get login() {
-    return this.#login;
-  }
+//   get login() {
+//     return this.#login;
+//   }
 
-  set login(newLogin) {
-    this.#login = newLogin;
-  }
+//   set login(newLogin) {
+//     this.#login = newLogin;
+//   }
 
-  get email() {
-    return this.#email;
-  }
+//   get email() {
+//     return this.#email;
+//   }
 
-  set email(newEmail) {
-    this.#email = newEmail;
-  }
-}
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
 
-const client = new Client({ login: "Sorkjn", email: "sjhdh@gmail.com" });
-console.log(client);
-client.email = "jhghdsjfj@jhfh.com";
-console.log(client.email);
+// const client = new Client({ login: "Sorkjn", email: "sjhdh@gmail.com" });
+// console.log(client);
+// client.email = "jhghdsjfj@jhfh.com";
+// console.log(client.email);
+
+/**
+ *? З об'єкту concerts потрібно отримати масив
+ *? в якому будуть лише імена міст.
+ *? З масиву потрібно прибрати міста, в яких концерт уже пройшов і
+ *? відсортувати їх у хронологічному порядку.
+ *? Результат вивести у консоль.
+ *? Очікуваний результат ["Одеса", "Умань", "Харків"]
+ */
+const concerts = {
+  Київ: new Date("2020-04-01"),
+  Умань: new Date("2025-07-02"),
+  Вінниця: new Date("2020-04-21"),
+  Одеса: new Date("2025-03-15"),
+  Хмельницький: new Date("2020-04-18"),
+  Харків: new Date("2025-07-10"),
+};
+
+const keys = Object.keys(concerts)
+  .filter((key) => concerts[key] > new Date())
+  .toSorted((a, b) => concerts[a] - concerts[b]);
+
+console.log(keys);
