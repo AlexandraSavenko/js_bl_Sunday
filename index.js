@@ -102,6 +102,12 @@ addEventListener('click', (evt) => {
 у кожному елементі списку у 2 рази
 */
 
+const listItemsEl = document.querySelectorAll(".listItem");
+const doubleBtnEl = document.querySelector("#double");
+doubleBtnEl.addEventListener("click", () =>
+  listItemsEl.forEach(item => item.textContent = BigInt(item.textContent) ** 2n)
+)
+
 //TODO:==============================================
 /*
 Завдання 7
