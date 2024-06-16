@@ -18,6 +18,15 @@ function handlerClick() {
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
 
+const swapButtonEl = document.querySelector("#swapButton");
+const leftSwapInputEl = document.querySelector("#leftSwapInput");
+const rightSwapInputEl = document.querySelector("#rightSwapInput");
+swapButtonEl.addEventListener("click", handlerSwapBtnClick);
+function handlerSwapBtnClick() {
+  const valueEl = leftSwapInputEl.value;
+  leftSwapInputEl.value = rightSwapInputEl.value;
+  rightSwapInputEl.value = valueEl;
+}
 //TODO:==============================================
 /*
 Завдання 3
