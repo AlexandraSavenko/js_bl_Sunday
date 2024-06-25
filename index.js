@@ -55,28 +55,21 @@ function handlerpasswordButtonClick() {
 Кнопка "Зменшити" робить квадрат менше на 10 пікселів,  "Збільшити" - більше на 10 пікселів.
 */
 
-const boxEl = document.querySelector("#box")
-const decreaseBtnEl = document.querySelector("#decrease")
-const increaseBtnEl = document.querySelector("#increase")
-
+const boxEl = document.querySelector("#box");
+const decreaseBtnEl = document.querySelector("#decrease");
+const increaseBtnEl = document.querySelector("#increase");
 
 decreaseBtnEl.addEventListener("click", () => {
-
-  const currentSize = parseInt(getComputedStyle(boxEl).width)
-  boxEl.style.width = currentSize - 10 + "px" ;
-  boxEl.style.height = currentSize - 10 + "px" ;
-
-
-} )
+  const currentSize = parseInt(getComputedStyle(boxEl).width);
+  boxEl.style.width = currentSize - 10 + "px";
+  boxEl.style.height = currentSize - 10 + "px";
+});
 
 increaseBtnEl.addEventListener("click", () => {
-
-  const currentSize = parseInt(getComputedStyle(boxEl).width)
-  boxEl.style.width = currentSize + 10 + "px" ;
-  boxEl.style.height = currentSize + 10 + "px" ;
-
-} )
-
+  const currentSize = parseInt(getComputedStyle(boxEl).width);
+  boxEl.style.width = currentSize + 10 + "px";
+  boxEl.style.height = currentSize + 10 + "px";
+});
 
 //TODO:==============================================
 /*
@@ -84,16 +77,14 @@ increaseBtnEl.addEventListener("click", () => {
 Додайте слухач кліку на window і визначте чи клікнув користувач у дів з id="place".
 */
 
-
-const placeEl = document.querySelector('#place');
-addEventListener('click', (evt) => {
+const placeEl = document.querySelector("#place");
+addEventListener("click", (evt) => {
   if (evt.target === placeEl) {
-    console.log(true)
-  }else{
-    console.log(false)
+    console.log(true);
+  } else {
+    console.log(false);
   }
-})
-
+});
 
 //TODO:==============================================
 /*
@@ -105,8 +96,10 @@ addEventListener('click', (evt) => {
 const listItemsEl = document.querySelectorAll(".listItem");
 const doubleBtnEl = document.querySelector("#double");
 doubleBtnEl.addEventListener("click", () =>
-  listItemsEl.forEach(item => item.textContent = BigInt(item.textContent) ** 2n)
-)
+  listItemsEl.forEach(
+    (item) => (item.textContent = BigInt(item.textContent) ** 2n)
+  )
+);
 
 //TODO:==============================================
 /*
@@ -117,3 +110,16 @@ https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/MouseEvent
 https://developer.mozilla.org/ru/docs/Web/API/MouseEvent/pageX
 https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
 */
+
+const outerCircleEL = document.querySelector(".outerCircle");
+const allDocument = document.documentElement;
+
+allDocument.addEventListener("mousemove", (evt) => {
+  allDocument.style.setProperty("--x", `${evt.pageX}px`);
+  allDocument.style.setProperty("--y", `${evt.pageY}px`);
+});
+
+outerCircleEL.addEventListener("click", handlerCircleClick);
+function handlerCircleClick() {
+  outerCircleEL.classList.toggle("moveCircle");
+}

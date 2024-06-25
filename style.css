@@ -112,3 +112,10 @@ div {
 .eventCode {
   color: blueviolet;
 }
+
+.moveCircle {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-20px, -20px);
+}
