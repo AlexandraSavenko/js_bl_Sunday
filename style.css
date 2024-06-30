@@ -112,7 +112,7 @@ div {
 .eventCode {
   color: blueviolet;
 }
-
+/* var 1 task 7 */
 .moveCircle {
   position: absolute;
   top: var(--y);

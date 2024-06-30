@@ -123,3 +123,23 @@ outerCircleEL.addEventListener("click", handlerCircleClick);
 function handlerCircleClick() {
   outerCircleEL.classList.toggle("moveCircle");
 }
+//
+//  вариант 2
+// const cursorEl = document.querySelector(".outerCircle");
+// let isToggled = false;
+// cursorEl.addEventListener("click", () => {
+//   if (!isToggled) {
+//     document.onmousemove = (event) => {
+//       cursorEl.style.position = "absolute";
+//       cursorEl.style.left = event.pageX - 15 + "px";
+//       cursorEl.style.top = event.pageY - 15 + "px";
+//     };
+//   } else {
+//     document.onmousemove = null;
+//     resetPosition();
+//   }
+//   isToggled = !isToggled;
+// });
+// function resetPosition() {
+//   cursorEl.style.position = "static";
+// }
